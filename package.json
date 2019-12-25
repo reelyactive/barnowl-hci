@@ -19,17 +19,18 @@
     "url": "https://github.com/reelyactive/barnowl-hci.git"
   },
   "dependencies": {
-    "bluetooth-hci-socket": ">=0.5.1",
-    "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.2.0"
+    "@abandonware/bluetooth-hci-socket": "~0.5.3-3",
+    "advlib-identifier": "~0.1.0",
+    "raddec": "~0.2.5"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/reelyactive/barnowl-hci/issues"
   },
   "contributors": [
-    { "name": "Jeffrey Dungen" }
+    {
+      "name": "Jeffrey Dungen"
+    }
   ],
   "license": "MIT"
 }
