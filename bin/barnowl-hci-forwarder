@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const dgram = require('dgram');
+const BarnowlHci = require('../lib/barnowlhci.js');
+
+const client = dgram.createSocket('udp4');
+let barnowl = new BarnowlHci();
+
+barnowl.addListener(BarnowlHci.SocketListener, {});
+
+barnowl.on('raddec', function(raddec) {
+  let raddecBuffer = Buffer.from(raddec.encodeAsHexString(), 'hex');
+  client.send(raddecBuffer, 50001, 'localhost', function(err) { });
+});

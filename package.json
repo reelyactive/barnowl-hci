@@ -15,7 +15,8 @@
   },
   "main": "./lib/barnowlhci.js",
   "scripts": {
-    "start": "node bin/barnowl-hci"
+    "start": "node bin/barnowl-hci",
+    "forwarder": "node bin/barnowl-hci-forwarder"
   },
   "repository": {
     "type": "git",
