@@ -9,6 +9,8 @@ let barnowl = new BarnowlHci();
 barnowl.addListener(BarnowlHci.SocketListener, {});
 
 barnowl.on('raddec', function(raddec) {
-  let raddecBuffer = Buffer.from(raddec.encodeAsHexString(), 'hex');
-  client.send(raddecBuffer, 50001, 'localhost', function(err) { });
+  let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true,
+                                             includePackets: true });
+  client.send(Buffer.from(raddecHex, 'hex'), 50001, 'localhost',
+              function(err) { });
 });
