@@ -14,14 +14,17 @@
     "node": ">=6.0.0"
   },
   "main": "./lib/barnowlhci.js",
+  "scripts": {
+    "start": "node bin/barnowl-hci"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/reelyactive/barnowl-hci.git"
   },
   "dependencies": {
-    "@abandonware/bluetooth-hci-socket": "~0.5.3-3",
-    "advlib-identifier": "~0.1.0",
-    "raddec": "~0.2.5"
+    "@abandonware/bluetooth-hci-socket": "^0.5.3-8",
+    "advlib-identifier": ">=0.1.0",
+    "raddec": ">=0.2.7"
   },
   "devDependencies": {},
   "bugs": {

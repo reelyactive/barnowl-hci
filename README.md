@@ -10,6 +10,16 @@ Installation
     npm install barnowl-hci
 
 
+Quick Start
+-----------
+
+Clone this repository, install package dependencies with `npm install`, and then from the root folder run at any time:
+
+    npm start
+
+If you observe a permissions error (ex: EPERM), either assign the necessary permissions for the given user (recommended) or run as super-user (with caution!)  __barnowl-hci__ will set the local Bluetooth radio to scan and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
+
+
 Hello barnowl-hci!
 ------------------
 
@@ -38,7 +48,7 @@ The following listener interfaces are supported.
 
 ### Socket
 
-Listen on a local Bluetooth HCI interface.  Check the [bluetooth-hci-socket](https://www.npmjs.com/package/bluetooth-hci-socket) package for prerequisites specific to the target platform.  Note that not all platforms are supported.  It may be required to grant additional user privileges, or else run as super user (at your own risk).
+Listen on a local Bluetooth HCI interface.  Check the [bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) package for prerequisites specific to the target platform.  Note that not all platforms are supported.  It may be required to grant additional user privileges, or else run as super user (at your own risk).
 
 ```javascript
 barnowl.addListener(BarnowlHci.SocketListener, {});

@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const BarnowlHci = require('../lib/barnowlhci.js');
+
+let barnowl = new BarnowlHci();
+
+barnowl.addListener(BarnowlHci.SocketListener, {});
+
+barnowl.on('raddec', function(raddec) {
+  console.log(raddec.toFlattened());
+});
