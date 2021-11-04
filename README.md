@@ -17,7 +17,7 @@ Clone this repository, install package dependencies with `npm install`, and then
 
     npm start
 
-If you observe a permissions error (ex: EPERM), either assign the necessary permissions for the given user (recommended) or run as super-user (with caution!)  __barnowl-hci__ will set the local Bluetooth radio to scan and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
+If you observe a permissions error (ex: EPERM), either [assign the necessary privileges](#assigning-privileges) (recommended) or run as root (_not_ recommended)  __barnowl-hci__ will set the local Bluetooth radio to scan and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
 
 
 Hello barnowl-hci!
@@ -61,6 +61,14 @@ Provides a steady stream of simulated reel packets for testing purposes.
 ```javascript
 barnowl.addListener(BarnowlHci.TestListener, {});
 ```
+
+
+Assigning Privileges
+--------------------
+
+To start a scan _without_ root privileges, it is necessary to grant __cap_net_raw__ privileges.  For instance, to grant privileges to Node.js so that _any_ Linux user may start a scan, run the following:
+
+    sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 
 
 License
