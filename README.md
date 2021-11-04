@@ -17,7 +17,7 @@ Clone this repository, install package dependencies with `npm install`, and then
 
     npm start
 
-If you observe a permissions error (ex: EPERM), either [assign the necessary privileges](#assigning-privileges) (recommended) or run as root (_not_ recommended)  __barnowl-hci__ will set the local Bluetooth radio to scan and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
+If you observe a permissions error (ex: EPERM), either [assign the necessary privileges](#assigning-privileges) (recommended) or run as root (_not_ recommended).  __barnowl-hci__ will set the local Bluetooth radio to scan and print any processed [raddec](https://github.com/reelyactive/raddec) data to the console.
 
 
 Hello barnowl-hci!
@@ -61,6 +61,16 @@ Provides a steady stream of simulated reel packets for testing purposes.
 ```javascript
 barnowl.addListener(BarnowlHci.TestListener, {});
 ```
+
+
+Pareto Anywhere Integration
+---------------------------
+
+__barnowl-hci__ includes a script to forward data to a local [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) instance as UDP raddecs with target localhost:50001.  Start this script with the command:
+
+    npm run forwarder
+
+See our [Run Pareto Anywhere on a Raspberry Pi](https://reelyactive.github.io/diy/pareto-anywhere-pi/#step02) tutorial for instructions on how to run __barnowl-hci__ on a Raspberry Pi as a systemd service on boot.
 
 
 Assigning Privileges
