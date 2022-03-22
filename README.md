@@ -6,7 +6,7 @@ __barnowl-hci__ converts RF decodings from the Bluetooth Host Controller Interfa
 - RTLS: _where_ is it relative to the receiving devices?
 - M2M: _how_ is its status, based on any payload included in the packet?
 
-__barnowl-hci__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-reel) that can run on resource-constrained edge devices.  It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
+__barnowl-hci__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-hci) that can run on resource-constrained edge devices.  It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
 
 
 Installation
@@ -54,7 +54,7 @@ As output you should see a stream of [raddec](https://github.com/reelyactive/rad
   transmitterIdType: 2,
   rssiSignature: [
     {
-      receiverId: "040e0a010910",
+      receiverId: "000000000000",
       receiverIdType: 2,
       rssi: -69,
       numberOfDecodings: 1
