@@ -14,6 +14,8 @@ Installation
 
     npm install barnowl-hci
 
+If installation fails on your system, validate [these installation requirements](#InstallationRequirements).
+
 
 Quick Start
 -----------
@@ -116,6 +118,16 @@ Assigning Privileges
 To start a scan _without_ root privileges, it is necessary to grant __cap_net_raw__ privileges.  For instance, to grant privileges to Node.js so that _any_ Linux user may start a scan, run the following:
 
     sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
+
+
+Installation Requirements
+-------------------------
+
+__barnowl-hci__ depends on the [bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) package which does not support all operating systems.  If your OS _is_ supported but a precompiled binary does not exist, npm will attempt to compile the binary using [node-gyp](https://www.npmjs.com/package/node-gyp) (which may require installation).
+
+On Ubuntu/Debian Linux distributions, if node-gyp throws errors during installation, the _make_ and _g++_ prerequisites for compilation may need to first be installed as follows:
+- sudo apt install make
+- sudo apt install build-essential
 
 
 Contributing
