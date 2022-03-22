@@ -123,11 +123,9 @@ To start a scan _without_ root privileges, it is necessary to grant __cap_net_ra
 Installation Requirements
 -------------------------
 
-__barnowl-hci__ depends on the [bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) package which does not support all operating systems.  If your OS _is_ supported but a precompiled binary does not exist, npm will attempt to compile the binary using [node-gyp](https://www.npmjs.com/package/node-gyp) (which may require installation).
+__barnowl-hci__ depends on the [bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) package which _does not_ support all operating systems.  If your OS _is_ supported but a precompiled binary does not exist, npm will attempt to compile the binary using [node-gyp](https://www.npmjs.com/package/node-gyp) (which may need to be installed).
 
-On Ubuntu/Debian Linux distributions, if node-gyp throws errors during installation, the _make_ and _g++_ prerequisites for compilation may need to first be installed as follows:
-- sudo apt install make
-- sudo apt install build-essential
+On Ubuntu/Debian Linux distributions, if node-gyp throws errors during installation, the _make_ and _g++_ prerequisites for compilation may need to first be installed with `sudo apt install make` and `sudo apt install build-essential` respectively.
 
 
 Contributing
