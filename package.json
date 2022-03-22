@@ -1,7 +1,10 @@
 {
   "name": "barnowl-hci",
   "homepage": "https://github.com/reelyactive/barnowl-hci/",
-  "author": "reelyActive <webdev@reelyactive.com>",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
   "description": "Collect ambient advertising packets from the Bluetooth Host Controller Interface (HCI) for real-time location and sensing.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
@@ -10,7 +13,7 @@
     "HCI",
     "raddec"
   ],
-  "version": "0.3.1",
+  "version": "0.3.2",
   "engines": {
     "node": ">=6.0.0"
   },
