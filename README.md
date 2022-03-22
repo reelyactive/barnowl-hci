@@ -14,7 +14,7 @@ Installation
 
     npm install barnowl-hci
 
-If installation fails on your system, validate [these installation requirements](#InstallationRequirements).
+If installation fails on your system, validate [these installation requirements](#installation-requirements).
 
 
 Quick Start
