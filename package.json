@@ -2,14 +2,15 @@
   "name": "barnowl-hci",
   "homepage": "https://github.com/reelyactive/barnowl-hci/",
   "author": "reelyActive <webdev@reelyactive.com>",
-  "description": "Interface the Bluetooth Host Controller Interface to barnowl open source software.  We believe in an open Internet of Things.",
+  "description": "Collect ambient advertising packets from the Bluetooth Host Controller Interface (HCI) for real-time location and sensing.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
     "barnowl",
     "Bluetooth",
-    "HCI"
+    "HCI",
+    "raddec"
   ],
-  "version": "0.3.0",
+  "version": "0.3.1",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -25,7 +26,7 @@
   "dependencies": {
     "@abandonware/bluetooth-hci-socket": "^0.5.3-8",
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.2.7"
+    "raddec": ">=0.2.8"
   },
   "devDependencies": {},
   "bugs": {
