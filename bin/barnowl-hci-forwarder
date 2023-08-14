@@ -5,12 +5,24 @@ const BarnowlHci = require('../lib/barnowlhci.js');
 
 const client = dgram.createSocket('udp4');
 let barnowl = new BarnowlHci();
+let address = 'localhost';
+let port = 50001;
+
+if(process.argv.length > 2) {
+  address = process.argv[2];
+}
 
 barnowl.addListener(BarnowlHci.SocketListener, {});
 
-barnowl.on('raddec', function(raddec) {
+barnowl.on('raddec', (raddec) => {
   let raddecHex = raddec.encodeAsHexString({ includeTimestamp: true,
                                              includePackets: true });
-  client.send(Buffer.from(raddecHex, 'hex'), 50001, 'localhost',
-              function(err) { });
+  client.send(Buffer.from(raddecHex, 'hex'), port, address, (err) => {
+    if(err) {
+      console.log('barnowl-hci error sending UDP packet, closing client');
+      client.close();
+    }
+  });
 });
+
+console.log('barnowl-hci forwarding UDP raddecs to ' + address + ':' + port);

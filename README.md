@@ -111,6 +111,12 @@ __barnowl-hci__ includes a script to forward data to a local [Pareto Anywhere](h
 
 See our [Run Pareto Anywhere on a Raspberry Pi](https://reelyactive.github.io/diy/pareto-anywhere-pi/#step02) and [Run Pareto Anywhere on a PC](https://reelyactive.github.io/diy/pareto-anywhere-pc/#step02) tutorials for instructions on how to run __barnowl-hci__ as a systemd service on boot on a Raspberry Pi or PC, respectively.
 
+To instead forward UDP raddecs to a _remote_ Pareto Anywhere instance, start this script with the command:
+
+    npm run forwarder xxx.xxx.xxx.xxx
+
+where xxx.xxx.xxx.xxx is the IP address of the remote instance.
+
 
 Assigning Privileges
 --------------------
