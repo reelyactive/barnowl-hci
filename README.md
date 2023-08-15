@@ -8,18 +8,12 @@ __barnowl-hci__ converts the decodings of _any_ ambient Bluetooth Low Energy dev
 __barnowl-hci__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-hci) that can run on resource-constrained edge devices.  It can [forward data](#pareto-anywhere-integration) to reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed in the code examples below.
 
 
-Installation
-------------
-
-    npm install barnowl-hci
-
-If installation fails on your system, validate [these installation requirements](#installation-requirements).
-
-
 Quick Start
 -----------
 
-Clone this repository, install package dependencies with `npm install`, and then from the root folder run at any time:
+Clone this repository and install package dependencies with `npm install`.  If installation fails on your system, validate [these installation requirements](#installation-requirements).
+
+Then from the root folder run at any time:
 
     npm start
 
