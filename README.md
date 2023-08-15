@@ -1,12 +1,11 @@
 barnowl-hci
 ===========
 
-__barnowl-hci__ converts RF decodings from the Bluetooth Host Controller Interface (HCI) into software-developer-friendly JSON: a real-time stream of [raddec](https://github.com/reelyactive/raddec/) objects which facilitate any and all of the following applications:
-- RFID: _what_ is present, based on the device identifier?
-- RTLS: _where_ is it relative to the receiving devices?
-- M2M: _how_ is its status, based on any payload included in the packet?
+__barnowl-hci__ converts the decodings of _any_ ambient Bluetooth Low Energy devices from a local Bluetooth Host Controller Interface (HCI) into standard developer-friendly JSON that is vendor/technology/application-agnostic.
 
-__barnowl-hci__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-hci) that can run on resource-constrained edge devices.  It is typically run behind a [barnowl](https://github.com/reelyactive/barnowl) instance which is included in the [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite.
+![Overview of barnowl-hci](https://reelyactive.github.io/barnowl-hci/images/overview.png)
+
+__barnowl-hci__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnowl-hci) that can run on resource-constrained edge devices.  It can [forward data](#pareto-anywhere-integration) to reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source middleware suite, and can just as easily be run standalone behind a [barnowl](https://github.com/reelyactive/barnowl) instance, as detailed in the code examples below.
 
 
 Installation
