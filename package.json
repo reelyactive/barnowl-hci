@@ -27,9 +27,9 @@
     "url": "https://github.com/reelyactive/barnowl-hci.git"
   },
   "dependencies": {
-    "@abandonware/bluetooth-hci-socket": "^0.5.3-11",
+    "@stoprocent/bluetooth-hci-socket": "^1.4.1",
     "advlib-identifier": ">=0.1.0",
-    "raddec": ">=0.5.0"
+    "raddec": ">=0.6.0"
   },
   "bugs": {
     "url": "https://github.com/reelyactive/barnowl-hci/issues"
