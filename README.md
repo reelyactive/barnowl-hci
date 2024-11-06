@@ -137,7 +137,7 @@ On Ubuntu/Debian Linux distributions, if node-gyp throws errors during installat
 Project History
 ---------------
 
-__barnowl-hci__ is based on the __bluetooth-hci-socket__ package which has been forked and maintained by various members of the open source community since 2015.  The initial versions of __barnowl-hci__ were based on Sandeep Mistry's original [bluetooth-hci-socket](https://www.npmjs.com/package/bluetooth-hci-socket).  The [@abandonware/bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) fork, which was adopted in 2019, can be found in the [release-0.3 branch](tree/release-0.3/).  And the [@stoprocent/bluetooth-hci-socket](https://www.npmjs.com/package/@stoprocent/bluetooth-hci-socket) fork, actively maintained at the time of writing, is currently used.
+__barnowl-hci__ is based on the __bluetooth-hci-socket__ package which has been forked and maintained by various members of the open source community since 2015.  The initial versions of __barnowl-hci__ were based on Sandeep Mistry's original [bluetooth-hci-socket](https://www.npmjs.com/package/bluetooth-hci-socket).  The [@abandonware/bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) fork, which was adopted in 2019, can be found in the [release-0.3 branch](https://github.com/reelyactive/barnowl-hci/tree/release-0.3/).  And the [@stoprocent/bluetooth-hci-socket](https://www.npmjs.com/package/@stoprocent/bluetooth-hci-socket) fork, actively maintained at the time of writing, is currently used.
 
 
 Contributing
