@@ -129,9 +129,15 @@ To start a scan _without_ root privileges, it is necessary to grant __cap_net_ra
 Installation Requirements
 -------------------------
 
-__barnowl-hci__ depends on the [bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) package which _does not_ support all operating systems.  If your OS _is_ supported but a precompiled binary does not exist, npm will attempt to compile the binary using [node-gyp](https://www.npmjs.com/package/node-gyp) (which may need to be installed).
+__barnowl-hci__ depends on the [bluetooth-hci-socket](https://www.npmjs.com/package/@stoprocent/bluetooth-hci-socket) package which _does not_ support all operating systems.  If your OS _is_ supported but a precompiled binary does not exist, npm will attempt to compile the binary using [node-gyp](https://www.npmjs.com/package/node-gyp) (which may need to be installed).
 
 On Ubuntu/Debian Linux distributions, if node-gyp throws errors during installation, the _make_ and _g++_ prerequisites for compilation may need to first be installed with `sudo apt install make` and `sudo apt install build-essential` respectively.
+
+
+Project History
+---------------
+
+__barnowl-hci__ is based on the __bluetooth-hci-socket__ package which has been forked and maintained by various members of the open source community since 2015.  The initial versions of __barnowl-hci__ were based on Sandeep Mistry's original [bluetooth-hci-socket](https://www.npmjs.com/package/bluetooth-hci-socket).  The [@abandonware/bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) fork which was adopted in 2019 can be found in the [release-0.3 branch](tree/release-0.3/).  And the [@stoprocent/bluetooth-hci-socket](https://www.npmjs.com/package/@stoprocent/bluetooth-hci-socket) fork, actively maintained at the time of writing, is currently used.
 
 
 Contributing
