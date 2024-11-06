@@ -11,11 +11,12 @@
     "barnowl",
     "Bluetooth",
     "HCI",
+    "bluetooth-hci-socket",
     "raddec"
   ],
-  "version": "0.3.4",
+  "version": "0.4.0",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=18.0.0"
   },
   "main": "./lib/barnowlhci.js",
   "scripts": {
