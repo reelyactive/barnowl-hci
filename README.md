@@ -83,8 +83,15 @@ The following listener interfaces are supported.
 Listen on a local Bluetooth HCI interface.  Check the [bluetooth-hci-socket](https://www.npmjs.com/package/@abandonware/bluetooth-hci-socket) package for prerequisites specific to the target platform.  Note that not all platforms are supported.  It may be required to grant additional user privileges, or else run as super user (at your own risk).
 
 ```javascript
-barnowl.addListener(BarnowlHci.SocketListener, {});
+let options = { enableActiveScanning: false,
+                scanIntervalMilliseconds: 10,
+                scanWindowMilliseconds: 10 };
+barnowl.addListener(BarnowlHci.SocketListener, options);
 ```
+
+The default options are shown.  Note that, according to the Bluetooth Core Specification:
+- valid interval & window durations are in the range of 2.5ms to 10.24s
+- the window duration cannot exceed the interval duration
 
 ### Test
 
