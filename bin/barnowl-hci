@@ -4,7 +4,22 @@ const BarnowlHci = require('../lib/barnowlhci.js');
 
 let barnowl = new BarnowlHci();
 
-barnowl.addListener(BarnowlHci.SocketListener, {});
+try {
+  barnowl.addListener(BarnowlHci.SocketListener, {});
+} catch (error) {
+  if (error.code === 'EPERM') {
+    console.log('The appropriate privileges to start an HCI scan are not set.');
+    console.log('Try assigning by running the following script: ');
+    console.log('\r\n    "npm run assign-hci-privileges"\r\n');
+    console.log('\r\n');
+    console.log('For more details, see: ');
+    return console.log(
+      'https://github.com/reelyactive/barnowl-hci?tab=readme-ov-file#assigning-privileges'
+    );
+  } else {
+    return console.error(error);
+  }
+}
 
 barnowl.on('raddec', function(raddec) {
   console.log(raddec.toFlattened());
