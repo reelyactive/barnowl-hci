@@ -121,7 +121,11 @@ where xxx.xxx.xxx.xxx is the IP address of the remote instance.
 Assigning Privileges
 --------------------
 
-To start a scan _without_ root privileges, it is necessary to grant __cap_net_raw__ privileges.  For instance, to grant privileges to Node.js so that _any_ Linux user may start a scan, run the following:
+If required, assign the necessary privileges for Node.js to initiate a HCI scan on the given OS with the command:
+
+    npm run privileges
+
+On Linux systems (such as the Raspberry Pi) this will run the following command to grant __cap_net_raw__ privileges so that _any_ Linux user may start a scan.
 
     sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 

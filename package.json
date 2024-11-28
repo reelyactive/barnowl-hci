@@ -22,7 +22,7 @@
   "scripts": {
     "start": "node bin/barnowl-hci",
     "forwarder": "node bin/barnowl-hci-forwarder",
-    "privileges": "node bin/hci-rpi-privileges"
+    "privileges": "node bin/assign-privileges"
   },
   "repository": {
     "type": "git",
