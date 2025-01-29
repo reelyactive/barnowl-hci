@@ -14,7 +14,7 @@
     "bluetooth-hci-socket",
     "raddec"
   ],
-  "version": "0.4.0",
+  "version": "0.4.1",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -29,7 +29,7 @@
     "url": "https://github.com/reelyactive/barnowl-hci.git"
   },
   "dependencies": {
-    "@stoprocent/bluetooth-hci-socket": "^1.4.1",
+    "@stoprocent/bluetooth-hci-socket": "^1.4.4",
     "advlib-identifier": ">=0.1.0",
     "raddec": ">=0.6.0"
   },
