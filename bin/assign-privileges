@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const os = require('os');
-const {exec} = require('child_process');
+const exec = require('child_process').exec;
 
 const LINUX_COMMAND = 'sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)';
 
@@ -18,11 +18,11 @@ switch(os.platform()) {
 }
 
 function handleError(err, stdout, stderr) {
-  if (err) {
+  if(err) {
     return console.error(err);
   }
 
-  // the *entire* stdout and stderr (buffered)
+  // Uncomment to debug using the *entire* stdout and stderr (buffered)
   //console.log(`stdout: ${stdout}`);
   //console.log(`stderr: ${stderr}`);
 }

@@ -14,8 +14,9 @@ if(process.argv.length > 2) {
 
 try {
   barnowl.addListener(BarnowlHci.SocketListener, {});
-} catch (error) {
-  if (error.code === 'EPERM') {
+}
+catch (error) {
+  if(error.code === 'EPERM') {
     console.log('The appropriate privileges to start an HCI scan are not set.');
     console.log('Try assigning by running the following script:');
     console.log('\r\n    "npm run privileges"\r\n');
@@ -24,7 +25,9 @@ try {
     return console.log(
       'https://github.com/reelyactive/barnowl-hci?tab=readme-ov-file#assigning-privileges'
     );
-  } else {
+  }
+  else {
+    console.log('Could not listen on the HCI socket, aborting, see error.');
     return console.error(error);
   }
 }
