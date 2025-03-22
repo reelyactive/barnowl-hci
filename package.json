@@ -14,7 +14,7 @@
     "bluetooth-hci-socket",
     "raddec"
   ],
-  "version": "0.4.3",
+  "version": "0.4.4",
   "engines": {
     "node": ">=18.0.0"
   },
