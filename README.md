@@ -83,7 +83,8 @@ The following listener interfaces are supported.
 Listen on a local Bluetooth HCI interface.  Check the [bluetooth-hci-socket](https://www.npmjs.com/package/@stoprocent/bluetooth-hci-socket) package for prerequisites specific to the target platform.  Note that not all platforms are supported.  It may be required to grant additional user privileges, or else run as super user (at your own risk).
 
 ```javascript
-let options = { enableActiveScanning: false,
+let options = { deviceId: null, // null = any, 0 = hci0, 1 = hci1, etc...
+                enableActiveScanning: false,
                 scanIntervalMilliseconds: 10,
                 scanWindowMilliseconds: 10,
                 kickIntervalMilliseconds: 1000 };
