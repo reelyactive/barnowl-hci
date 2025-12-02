@@ -84,6 +84,7 @@ Listen on a local Bluetooth HCI interface.  Check the [bluetooth-hci-socket](htt
 
 ```javascript
 let options = { deviceId: null, // null = any, 0 = hci0, 1 = hci1, etc...
+                driver: null,   // See note below
                 enableActiveScanning: false,
                 scanIntervalMilliseconds: 10,
                 scanWindowMilliseconds: 10,
@@ -94,6 +95,11 @@ barnowl.addListener(BarnowlHci.SocketListener, options);
 The default options are shown above.  Note that, according to the Bluetooth Core Specification:
 - valid interval & window durations are in the range of 2.5ms to 10.24s
 - the window duration cannot exceed the interval duration
+
+__barnowl-hci__ will automatically select the appropriate driver based on the platform and environment.  To instead force a given driver, include the driver option as follows:
+- 'uart' for UART/Serial driver on any OS
+- 'usb' for USB driver on Windows/FreeBSD
+- 'native' for Linux/Android
 
 ### Test
 
