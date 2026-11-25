@@ -146,6 +146,19 @@ __barnowl-hci__ depends on the [bluetooth-hci-socket](https://www.npmjs.com/pack
 On Ubuntu/Debian Linux distributions, if node-gyp throws errors during installation, the _make_ and _g++_ prerequisites for compilation may need to first be installed with `sudo apt install make` and `sudo apt install build-essential` respectively.
 
 
+HCI-Capable BLE USB Dongles
+---------------------------
+
+For platforms without an onboard Bluetooth radio, or where the onboard Bluetooth radio cannot be used, an inexpensive USB dongle may be an option.  The following Bluetooth Low Energy USB dongles have been validated to support HCI mode and work with __barnowl-hci__:
+
+| Vendor   | Model  | Chipset    | Notes |
+|:---------|:-------|:-----------|:------|
+| Feasycom | (FSC-BP119)[https://www.feasycom.com/product/fsc-bp119/] | CSR8510A10 | (Buy from Espruino)[https://shop.espruino.com/usb-bluetooth] |
+| Olimex   | (BT-4)[https://www.olimex.com/Products/USB-Modules/USB-BT4/] | CSR8510A10 | |
+
+This is, of course, not an exhaustive list.  It is recommended to validate that any candidate dongle supports HCI mode on your OS.
+
+
 Project History
 ---------------
 
