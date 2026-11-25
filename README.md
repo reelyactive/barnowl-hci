@@ -153,8 +153,8 @@ For platforms without an onboard Bluetooth radio, or where the onboard Bluetooth
 
 | Vendor   | Model  | Chipset    | Notes |
 |:---------|:-------|:-----------|:------|
-| Feasycom | (FSC-BP119)[https://www.feasycom.com/product/fsc-bp119/] | CSR8510A10 | (Buy from Espruino)[https://shop.espruino.com/usb-bluetooth] |
-| Olimex   | (BT-4)[https://www.olimex.com/Products/USB-Modules/USB-BT4/] | CSR8510A10 | |
+| Feasycom | [FSC-BP119](https://www.feasycom.com/product/fsc-bp119/) | CSR8510A10 | [Buy from Espruino](https://shop.espruino.com/usb-bluetooth) |
+| Olimex   | [BT-4](https://www.olimex.com/Products/USB-Modules/USB-BT4/) | CSR8510A10 | [Buy from DigiKey](https://www.digikey.com/en/products/detail/olimex-ltd/USB-BT4/21661979) |
 
 This is, of course, not an exhaustive list.  It is recommended to validate that any candidate dongle supports HCI mode on your OS.
 
